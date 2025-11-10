@@ -1,0 +1,101 @@
+
+Java installation path:
+----------------------
+/usr/lib/jvm
+/usr/lib/jvm/jdk1.8.0_241
+/usr/lib/jvm/jdk-11.0.27-oracle-x64
+
+
+Hadoop path:
+------------
+/usr/local/hadoop/
+
+
+Hadoop details:
+---------------
+user: hadoop
+pass: admin
+
+User switch:
+su - <user>
+
+Ex: su - hadoop   /  su - osanda
+
+
+.ssh path:
+=========
+admin:///home/osanda/.ssh
+
+
+hdfs name/data nodes locations:
+===============================
+
+<property>
+	<name>dfs.namenode.name.dir</name>
+	<value>file:/usr/local/hadoop/hdfs/namenode</value>
+</property>
+<property>
+	<name>dfs.datanode.data.dir</name>
+	<value>file:/usr/local/hadoop/hdfs/datanode</value>
+</property>
+
+
+Check services:
+---------------
+jps
+
+Web UIs:
+- HDFS: http://localhost:9870
+- YARN: http://localhost:8088
+
+
+Stop hadoop:
+------------
+
+# Stop services if any are running
+stop-all.sh
+
+# Format namenode (warning: deletes all data)
+hdfs namenode -format
+
+# Start services again
+start-all.sh
+
+
+
+Start hadoop services:
+----------------------
+
+# Start Hadoop services (run these commands):
+
+# Format the NameNode (only first time setup)
+hdfs namenode -format
+
+# Start HDFS (Storage)
+start-dfs.sh
+
+# Start YARN (Resource Management)  
+start-yarn.sh
+
+# For standalone pseudo-cluster, you can use:
+start-all.sh
+
+
+Check HDFS status:
+-----------------
+hdfs dfsadmin -report
+
+
+Create hadoop folder:
+---------------------
+hadoop fs -mkdir /input
+
+
+move a file to created input directory:
+---------------------------------------
+hadoop fs -put input.txt /input
+
+
+Run word count example:
+-----------------------
+hadoop jar target/WordCount-1.0-SNAPSHOT.jar org.testhadoop.WC_Runner /input/input.txt /output 
