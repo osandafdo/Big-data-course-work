@@ -1,0 +1,231 @@
+
+
+MATCH (n) return n
+
+
+MATCH (n) DETACH DELETE n
+
+
+
+CREATE (:User {name:'Alice'})-[:FOLLOWS]->(:User {name:'Bob'}),
+(:User {name:'Bob'})-[:FOLLOWS]->(:User {name:'Carol'}),
+(:User {name:'Carol'})-[:FOLLOWS]->(:User {name:'Alice'});
+
+
+
+// Create Users
+// --------------------------
+
+CREATE 
+(:User {name:'Srimal'}),
+(:User {name:'Dinesh'}),
+(:User {name:'Lakshan'}),
+(:User {name:'Amal'}),
+(:User {name:'Kamal'}),
+(:User {name:'Namal'}),
+(:User {name:'Dayan'}),
+(:User {name:'Sajitha'}),
+(:User {name:'Indika'}),
+(:User {name:'Osanda'}),
+(:User {name:'Ashan'}),
+(:User {name:'Dushan'}),
+(:User {name:'Manura'}),
+(:User {name:'Ajith'}),
+(:User {name:'Kumara'}),
+(:User {name:'Anura'}),
+(:User {name:'Gihan'}),
+(:User {name:'Onesha'}),
+(:User {name:'Chandana'}),
+(:User {name:'Yoshitha'})
+;
+
+
+// Create Relationships
+// --------------------------
+
+CREATE 
+// Osanda follows
+(:User {name:'Osanda'})-[:FOLLOWS]->(:User {name:'Srimal'}),
+(:User {name:'Osanda'})-[:FOLLOWS]->(:User {name:'Dinesh'}),
+(:User {name:'Osanda'})-[:FOLLOWS]->(:User {name:'Lakshan'}),
+(:User {name:'Osanda'})-[:FOLLOWS]->(:User {name:'Amal'}),
+(:User {name:'Osanda'})-[:FOLLOWS]->(:User {name:'Kamal'}),
+(:User {name:'Osanda'})-[:FOLLOWS]->(:User {name:'Dayan'}),
+(:User {name:'Osanda'})-[:FOLLOWS]->(:User {name:'Sajitha'}),
+(:User {name:'Osanda'})-[:FOLLOWS]->(:User {name:'Indika'}),
+(:User {name:'Osanda'})-[:FOLLOWS]->(:User {name:'Ashan'}),
+(:User {name:'Osanda'})-[:FOLLOWS]->(:User {name:'Dushan'}),
+(:User {name:'Osanda'})-[:FOLLOWS]->(:User {name:'Manura'}),
+(:User {name:'Osanda'})-[:FOLLOWS]->(:User {name:'Ajith'}),
+(:User {name:'Osanda'})-[:FOLLOWS]->(:User {name:'Onesha'}),
+(:User {name:'Osanda'})-[:FOLLOWS]->(:User {name:'Chandana'}),
+(:User {name:'Osanda'})-[:FOLLOWS]->(:User {name:'Dushan'}),
+
+// Dinesh follows 
+(:User {name:'Dinesh'})-[:FOLLOWS]->(:User {name:'Osanda'}),
+(:User {name:'Dinesh'})-[:FOLLOWS]->(:User {name:'Kamal'}),
+(:User {name:'Dinesh'})-[:FOLLOWS]->(:User {name:'Lakshan'}),
+(:User {name:'Dinesh'})-[:FOLLOWS]->(:User {name:'Namal'}),
+(:User {name:'Dinesh'})-[:FOLLOWS]->(:User {name:'Gihan'}),
+(:User {name:'Dinesh'})-[:FOLLOWS]->(:User {name:'Yoshitha'}),
+(:User {name:'Dinesh'})-[:FOLLOWS]->(:User {name:'Sajitha'}),
+(:User {name:'Dinesh'})-[:FOLLOWS]->(:User {name:'Indika'}),
+(:User {name:'Dinesh'})-[:FOLLOWS]->(:User {name:'Ashan'}),
+(:User {name:'Dinesh'})-[:FOLLOWS]->(:User {name:'Dushan'}),
+
+// Lakshan follows 
+(:User {name:'Lakshan'})-[:FOLLOWS]->(:User {name:'Osanda'}),
+(:User {name:'Lakshan'})-[:FOLLOWS]->(:User {name:'Dinesh'}),
+(:User {name:'Lakshan'})-[:FOLLOWS]->(:User {name:'Srimal'}),
+(:User {name:'Lakshan'})-[:FOLLOWS]->(:User {name:'Namal'}),
+(:User {name:'Lakshan'})-[:FOLLOWS]->(:User {name:'Yoshitha'}),
+
+// Lakshan follows 
+(:User {name:'Lakshan'})-[:FOLLOWS]->(:User {name:'Osanda'}),
+(:User {name:'Lakshan'})-[:FOLLOWS]->(:User {name:'Dinesh'}),
+(:User {name:'Lakshan'})-[:FOLLOWS]->(:User {name:'Srimal'}),
+(:User {name:'Lakshan'})-[:FOLLOWS]->(:User {name:'Namal'}),
+(:User {name:'Lakshan'})-[:FOLLOWS]->(:User {name:'Yoshitha'}),
+
+(:User {name:'Bob'})-[:FOLLOWS]->(:User {name:'Carol'}),
+(:User {name:'Carol'})-[:FOLLOWS]->(:User {name:'Dave'}),
+(:User {name:'Dave'})-[:FOLLOWS]->(:User {name:'Eve'}),
+(:User {name:'Eve'})-[:FOLLOWS]->(:User {name:'Frank'}),
+(:User {name:'Frank'})-[:FOLLOWS]->(:User {name:'Grace'}),
+(:User {name:'Grace'})-[:FOLLOWS]->(:User {name:'Hank'}),
+(:User {name:'Hank'})-[:FOLLOWS]->(:User {name:'Ivy'}),
+(:User {name:'Ivy'})-[:FOLLOWS]->(:User {name:'Jack'}),
+(:User {name:'Jack'})-[:FOLLOWS]->(:User {name:'Alice'})
+;
+
+
+
+
+// Create Relationships
+// --------------------------
+
+MATCH (a:User {name: 'Alice'}), (b:User {name: 'Bob'})
+CREATE (a)-[:FOLLOWS]->(b)
+RETURN a, b
+
+MATCH (a:User {name: 'Bob'}), (b:User {name: 'Carol'})
+CREATE (a)-[:FOLLOWS]->(b)
+RETURN a, b
+
+MATCH (a:User {name: 'Carol'}), (b:User {name: 'Alice'})
+CREATE (a)-[:FOLLOWS]->(b)
+RETURN a, b
+
+MATCH (a:User {name: 'Ivy'}), (b:User {name: 'Jack'})
+CREATE (a)-[:FOLLOWS]->(b)
+RETURN a, b
+
+MATCH (a:User {name: 'Grace'}), (b:User {name: 'Ivy'})
+CREATE (a)-[:FOLLOWS]->(b)
+RETURN a, b
+
+MATCH (a:User {name: 'Grace'}), (b:User {name: 'Ivy'})
+CREATE (a)-[:FOLLOWS]->(b)
+RETURN a, b
+
+
+
+// Random Relationaships
+
+// Match all users and collect them
+MATCH (u:User)
+WITH collect(u) as users
+
+// Unwind twice to get all possible pairs except self relationships
+UNWIND users as user1
+UNWIND users as user2
+WITH user1, user2
+WHERE id(user1) <> id(user2)
+
+// Limit to approximately 150 random pairs by ordering by random()
+WITH user1, user2
+ORDER BY rand()
+LIMIT 150
+
+// Create the FOLLOWS relationships
+CREATE (user1)-[:FOLLOWS]->(user2)
+RETURN count(*) as createdRelationships
+
+
+This query:
+Collects all user nodes.
+Pairs each user with every other (except self).
+Orders the pairs randomly.
+Limits the result to 150 pairs.
+Creates FOLLOWS relationships on those pairs.
+
+
+
+
+9. Write three Cypher queries that show interesting insights from your graph, such as:
+
+1. Find all users connected to a specific person:
+ 	
+	MATCH (a:User {name: 'Osanda'})<-[:FOLLOWS]-(connectedUsers)
+	RETURN DISTINCT connectedUsers
+
+	Incoming only (Users who follows 'Osanda'): <-[:FOLLOWS]-
+
+
+2.	Find the most connected node:
+
+	MATCH (n)
+	RETURN n.name AS node, size((n.name)) as counts
+	order by counts DESC
+
+	Most connected nodes are "Chandana" and "Yoshitha"
+
+	| node     │counts│
+	╞══════════╪══════╡
+	│"Chandana"│8     │
+	├──────────┼──────┤
+	│"Yoshitha"│8     │
+	├──────────┼──────┤
+	│"Lakshan" │7     │
+	├──────────┼──────┤
+	│"Sajitha" │7     │
+	├──────────┼──────┤
+	│"Srimal"  │6     │
+	├──────────┼──────┤
+	│"Dinesh"  │6     │
+	├──────────┼──────┤
+	│"Indika"  │6     │
+	├──────────┼──────┤
+	│"Osanda"  │6     │
+	├──────────┼──────┤
+	│"Dushan"  │6     │
+	├──────────┼──────┤
+	│"Manura"  │6     │
+	├──────────┼──────┤
+	│"Kumara"  │6     │
+	├──────────┼──────┤
+	│"Onesha"  │6     │
+	├──────────┼──────┤
+	│"Kamal"   │5     │
+	├──────────┼──────┤
+	│"Namal"   │5     │
+	├──────────┼──────┤
+	│"Dayan"   │5     │
+	├──────────┼──────┤
+	│"Ashan"   │5     │
+	├──────────┼──────┤
+	│"Ajith"   │5     │
+	├──────────┼──────┤
+	│"Anura"   │5     │
+	├──────────┼──────┤
+	│"Gihan"   │5     │
+	├──────────┼──────┤
+	│"Amal"    │4     │
+	└──────────┴──────┘
+
+
+3. Find shortest paths or indirect connections.
+
+	MATCH (a:User {name:'Chandana'}), (b:User {name:'Dinesh'}),
+	p = shortestPath((a)-[*]-(b))
+	RETURN p

@@ -1,2 +1,5 @@
 Kafka connector health check: [should return [] if the connectors are healthy]
 http://localhost:8083/connectors
+
+Run docker postgres in CLI:
+docker exec -it postgres-container bash
