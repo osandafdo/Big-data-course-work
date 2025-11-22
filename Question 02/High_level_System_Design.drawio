@@ -1,0 +1,150 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36" version="28.2.5">
+  <diagram name="Page-1" id="Z3Ts95n6OzDgxhhpPs2O">
+    <mxGraphModel dx="1678" dy="986" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="8SbbEDQ5ZJbqKOX92tr8-1" value="Real-Time IoT Sensor Data Analytics using Apache Kafka" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=21;" vertex="1" parent="1">
+          <mxGeometry x="40" width="1640" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="8SbbEDQ5ZJbqKOX92tr8-2" value="Large Data File" style="whiteSpace=wrap;html=1;aspect=fixed;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="267" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="8SbbEDQ5ZJbqKOX92tr8-3" value="" style="whiteSpace=wrap;html=1;aspect=fixed;dashed=1;dashPattern=8 8;" vertex="1" parent="1">
+          <mxGeometry x="280" y="190" width="250" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="8SbbEDQ5ZJbqKOX92tr8-4" value="Sensor Data Analytic Application" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="275" y="160" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="8SbbEDQ5ZJbqKOX92tr8-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="8SbbEDQ5ZJbqKOX92tr8-6" target="8SbbEDQ5ZJbqKOX92tr8-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8SbbEDQ5ZJbqKOX92tr8-6" value="Read data chunks to process" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="290" y="200" width="230" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8SbbEDQ5ZJbqKOX92tr8-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="8SbbEDQ5ZJbqKOX92tr8-7" target="8SbbEDQ5ZJbqKOX92tr8-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8SbbEDQ5ZJbqKOX92tr8-7" value="Preprocess Data" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="290" y="285" width="230" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8SbbEDQ5ZJbqKOX92tr8-8" value="Kafka Producer" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="290" y="370" width="230" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8SbbEDQ5ZJbqKOX92tr8-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.468;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="8SbbEDQ5ZJbqKOX92tr8-2" target="8SbbEDQ5ZJbqKOX92tr8-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8SbbEDQ5ZJbqKOX92tr8-25" value="Read" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="8SbbEDQ5ZJbqKOX92tr8-9">
+          <mxGeometry x="-0.1024" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8SbbEDQ5ZJbqKOX92tr8-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="8SbbEDQ5ZJbqKOX92tr8-13" target="8SbbEDQ5ZJbqKOX92tr8-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8SbbEDQ5ZJbqKOX92tr8-26" value="Monitor" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="8SbbEDQ5ZJbqKOX92tr8-22">
+          <mxGeometry x="-0.0667" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8SbbEDQ5ZJbqKOX92tr8-13" value="" style="whiteSpace=wrap;html=1;aspect=fixed;dashed=1;dashPattern=8 8;" vertex="1" parent="1">
+          <mxGeometry x="670" y="190" width="250" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="8SbbEDQ5ZJbqKOX92tr8-14" value="Kafka" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="670" y="160" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="8SbbEDQ5ZJbqKOX92tr8-15" value="raw_sensor_data_ingestion_topic" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="680" y="222" width="230" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8SbbEDQ5ZJbqKOX92tr8-16" value="processed_vehical_data_topic" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="680" y="310" width="230" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8SbbEDQ5ZJbqKOX92tr8-18" value="" style="points=[];aspect=fixed;html=1;align=center;shadow=0;dashed=0;fillColor=#FF6A00;strokeColor=none;shape=mxgraph.alibaba_cloud.kafka;" vertex="1" parent="1">
+          <mxGeometry x="720" y="140" width="56.699999999999996" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="8SbbEDQ5ZJbqKOX92tr8-20" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="720" y="530" width="152.5" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="8SbbEDQ5ZJbqKOX92tr8-19" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#8C4FFF;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.opensearch_dashboards;" vertex="1" parent="1">
+          <mxGeometry x="730" y="540" width="132.2" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="8SbbEDQ5ZJbqKOX92tr8-21" value="Kafdrop" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="762.5" y="650" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="8SbbEDQ5ZJbqKOX92tr8-27" value="" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;dashPattern=8 8;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="192" width="250" height="338" as="geometry" />
+        </mxCell>
+        <mxCell id="8SbbEDQ5ZJbqKOX92tr8-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="8SbbEDQ5ZJbqKOX92tr8-28" target="8SbbEDQ5ZJbqKOX92tr8-29">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8SbbEDQ5ZJbqKOX92tr8-28" value="Consume sensor data" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1090" y="202" width="230" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8SbbEDQ5ZJbqKOX92tr8-36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="8SbbEDQ5ZJbqKOX92tr8-29" target="8SbbEDQ5ZJbqKOX92tr8-34">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8SbbEDQ5ZJbqKOX92tr8-29" value="Process Sensor Data" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1090" y="287" width="230" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8SbbEDQ5ZJbqKOX92tr8-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="8SbbEDQ5ZJbqKOX92tr8-8" target="8SbbEDQ5ZJbqKOX92tr8-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8SbbEDQ5ZJbqKOX92tr8-24" value="Produce&lt;div&gt;messages to&lt;/div&gt;&lt;div&gt;kafka&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="8SbbEDQ5ZJbqKOX92tr8-23">
+          <mxGeometry x="0.0206" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8SbbEDQ5ZJbqKOX92tr8-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="8SbbEDQ5ZJbqKOX92tr8-15" target="8SbbEDQ5ZJbqKOX92tr8-28">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8SbbEDQ5ZJbqKOX92tr8-32" value="Consume&lt;div&gt;kafka&lt;/div&gt;&lt;div&gt;messages&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="8SbbEDQ5ZJbqKOX92tr8-31">
+          <mxGeometry x="0.0037" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8SbbEDQ5ZJbqKOX92tr8-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.54;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="8SbbEDQ5ZJbqKOX92tr8-33" target="8SbbEDQ5ZJbqKOX92tr8-43">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8SbbEDQ5ZJbqKOX92tr8-45" value="Connect" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="8SbbEDQ5ZJbqKOX92tr8-44">
+          <mxGeometry x="0.2414" y="-3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8SbbEDQ5ZJbqKOX92tr8-33" value="Postgre Database" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/databases/Azure_Database_PostgreSQL_Server.svg;" vertex="1" parent="1">
+          <mxGeometry x="1490" y="530" width="75" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="8SbbEDQ5ZJbqKOX92tr8-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="8SbbEDQ5ZJbqKOX92tr8-34" target="8SbbEDQ5ZJbqKOX92tr8-35">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8SbbEDQ5ZJbqKOX92tr8-34" value="Persist data" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1090" y="375" width="230" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8SbbEDQ5ZJbqKOX92tr8-41" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="8SbbEDQ5ZJbqKOX92tr8-35" target="8SbbEDQ5ZJbqKOX92tr8-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8SbbEDQ5ZJbqKOX92tr8-42" value="Produce&amp;nbsp;&lt;div&gt;processed&amp;nbsp;&lt;/div&gt;&lt;div&gt;data to&lt;/div&gt;&lt;div&gt;Kafka&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="8SbbEDQ5ZJbqKOX92tr8-41">
+          <mxGeometry x="0.104" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8SbbEDQ5ZJbqKOX92tr8-35" value="Produce to kafka" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1090" y="460" width="230" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8SbbEDQ5ZJbqKOX92tr8-38" value="Sensor Data Consumer" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="1080" y="160" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="8SbbEDQ5ZJbqKOX92tr8-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.003;entryY=0.58;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="8SbbEDQ5ZJbqKOX92tr8-34" target="8SbbEDQ5ZJbqKOX92tr8-33">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8SbbEDQ5ZJbqKOX92tr8-40" value="Write&lt;div&gt;process&lt;/div&gt;&lt;div&gt;data&lt;/div&gt;&lt;div&gt;Postgre&lt;/div&gt;&lt;div&gt;Database&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="8SbbEDQ5ZJbqKOX92tr8-39">
+          <mxGeometry x="0.0127" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8SbbEDQ5ZJbqKOX92tr8-43" value="&lt;font style=&quot;font-size: 13px;&quot;&gt;Grafana Dashboard&lt;/font&gt;" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/other/Grafana.svg;shadow=0;imageBorder=none;imageBackground=none;fillStyle=auto;labelPosition=center;verticalLabelPosition=top;verticalAlign=bottom;spacingTop=0;spacing=8;spacingLeft=0;" vertex="1" parent="1">
+          <mxGeometry x="1520" y="192" width="177.73" height="138" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
